@@ -2,15 +2,36 @@
 
 ## Welcome
 
-Congratulations! You've just taken the first major step in writing a custom plugin for the [Elgato Stream Deck][Stream Deck].
+Hi and thank you for checking the project out. If you would like to help contribute by all means give it a shot.
+
+## Getting Started
+
+To start using or testing the plugin you will first need to install this bambu lab cli: https://github.com/davglass/bambu-cli
+The hardest thing here is install node.js, you can find the installer here: [https://nodejs.org/en](https://nodejs.org/en/download/current)
+
+Once you get the cli working, you will need to login using bambu-cli login
+Here you should enter your bambu account email in the username field, I had no luck with my actual username.
+
+Now that the config stuff is done its time to install the plugin.
+Open Bambulab.sln in visual studio and build the solution.
+
+Use the following command in a console window to register the plugin: .\RegisterPluginAndStartStreamDeck.ps1
+
+It should now apear on your stream deck
 
 ## State of Things
 
+### Missing Features
+* Ideally the program would run continuously and would not need a button press to update information.
+* Support for multiple printers. Theoretically this should not be too hard, but i also do not own two printers to test with.
+* Add Mac Support
+* The groundwork is already here to start making more actions, ie. uploading files to certain printers, saving timelapses etc.
+  
 Within the directory from which you are reading this file, there exist a few other necessary files. These are:
 
 * `Bambulab.csproj`: The C# project file used to build the plugin
 * `Program.cs`: The code for the application which will be called by the [Stream Deck software][] when loading and running your plugin.
-* `DefaultPluginAction.cs`: The file in which the functionality of the first (default) action for the plugin will be written. This file provides a basic implementation of an action for your plugin, following a pattern which can be repeated.
+* `BambuLabAction.cs`: The file in which the functionality of the default action for the plugin is written. This file provides a basic implementation of the bambu status plugin, following a pattern which can be repeated.
 
 ## What's Next?
 
@@ -29,7 +50,7 @@ Your first step should set a value for both the **Author** and the **URL** value
 
 ### Images and Other Assets
 
-The following are the base set of images/icons which are needed for the plugin. While defaults have been provided, they should be changed to help distinguish your plugin and its action(s) from others.
+The following are the base set of images/icons which are needed for the plugin.
 
 Unless otherwise noted, image assets should all be in the "Portable Network Graphics" (PNG) format.
 
@@ -93,7 +114,7 @@ Again, just as with the **Category Icon** and the **Action Image**,two separate 
 
 ### Can I do any more?
 
-Of course! First, congratulations on getting your first action for your Stream Deck plugin working! To allow your plugin to do more, you will need to create (and implement) a new Action definition. Here is how you do this:
+Of course! First, To allow the plugin to do more, you will need to create (and implement) a new Action definition. Here is how you do this:
 
 1. Create a new class (in a new file or an existing one), and make sure it inherits from the `BaseStreamDeckAction` class
 e.g.: `internal class MyNextPluginAction : BaseStreamDeckAction`

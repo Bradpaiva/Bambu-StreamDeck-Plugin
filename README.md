@@ -5,13 +5,19 @@ Hi and thank you for checking the project out. If you would like to help contrib
 ## Getting Started
 
 To start using or testing the plugin you will first need to install this bambu lab cli: https://github.com/davglass/bambu-cli
+
 The hardest task here is installing node.js, you can find the installer here: [https://nodejs.org/en](https://nodejs.org/en/download/current)
+
 you may need to manually add C:\Program Files\nodejs\ to you system enviornment path.
 
+
 Once you get the cli working, you will need to login using bambu-cli login
+
 Here you should enter your bambu account email in the username field, I had no luck with my actual username.
 
+
 Now that the config stuff is done its time to install the plugin.
+
 Open Bambulab.sln in visual studio and build the solution.
 
 Use the following command in a console window to register the plugin: .\RegisterPluginAndStartStreamDeck.ps1

@@ -26,7 +26,8 @@ It should now apear on your stream deck
 * Support for multiple printers. Theoretically this should not be too hard, but i also do not own two printers to test with.
 * Add Mac Support
 * The groundwork is already here to start making more actions, ie. uploading files to certain printers, saving timelapses etc.
-  
+
+### Files
 Within the directory from which you are reading this file, there exist a few other necessary files. These are:
 
 * `Bambulab.csproj`: The C# project file used to build the plugin

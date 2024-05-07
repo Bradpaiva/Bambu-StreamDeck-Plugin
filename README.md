@@ -1,5 +1,3 @@
-# Working With This Template
-
 ## Welcome
 
 Hi and thank you for checking the project out. If you would like to help contribute by all means give it a shot.
